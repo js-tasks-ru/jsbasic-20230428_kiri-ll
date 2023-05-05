@@ -11,15 +11,7 @@ function print(text) {
  */
 function isValid(name) {
 
-	if (name !== null && name !== '' && !(name.includes(' ')) && name.length >= 4) {
-
-		return true;
-
-	} else {
-
-		return false;
-
-	};
+	return name !== null && name !== '' && !(name.includes(' ')) && name.length >= 4;
 
 }
 
