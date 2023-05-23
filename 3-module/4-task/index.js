@@ -1,6 +1,6 @@
 function showSalary(users, age) {
 
-	let result = users.map((item) => (item.age <= age) ? `${item.name}, ${item.balance}` : undefined).filter((item) => !(item === undefined)).join('\n')
+	let result = users.filter(item => item.age <= age).map(item => `${item.name}, ${item.balance}`).join('\n');
 
 	if (result) return result;
 }
