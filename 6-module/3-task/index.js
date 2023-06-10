@@ -16,21 +16,20 @@ export default class Carousel {
 		let btnArrowLeft = slider.querySelector('.carousel__arrow_left');
 		let carousel = slider.querySelector('.carousel__inner');
 		let btnAddProduct = slider.querySelectorAll('.carousel__button');
-		let slideWidthCarousel = 500;
+		let slideWidthCarousel = 0;
 		let position = 0;
 
-		document.addEventListener('DOMContentLoaded', () => {
+		function makeSlideRight() {
 			let slide = document.querySelector('.carousel__slide');
 			slideWidthCarousel = slide.offsetWidth;
-		});
-
-		function makeSlideRight() {
 			position += slideWidthCarousel;
 			carousel.style.transform = `translateX(-${position}px)`;
 			hideBtn();
 		};
 
 		function makeSlideLeft() {
+			let slide = document.querySelector('.carousel__slide');
+			slideWidthCarousel = slide.offsetWidth;
 			position -= slideWidthCarousel;
 			carousel.style.transform = `translateX(-${position}px)`;
 			hideBtn();
